@@ -6,7 +6,7 @@
 
 @section('content')
  
-  <form action="{{ route('UpdateBlogSection') }}" method="post">
+  <form action="{{ route('admin.UpdateBlogSection') }}" method="post">
     @csrf
     @method('put')
     <input type="hidden" name="id" value="{{ $blogSection->id }}">

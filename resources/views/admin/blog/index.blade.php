@@ -5,13 +5,13 @@
 @endsection
 
 @section('content')
-    blog section
-
+    
     <div class="row">
         <div class="col-lg-12">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header d-flex justify-content-between">
                     <h5 class="card-title mb-0">Blog</h5>
+                    <a href="{{ route('admin.createblog') }}" class="btn btn-success">Add Blog</a>
                 </div>
                 <div class="card-body">
                     <div id="model-datatables_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
@@ -73,7 +73,7 @@
                                             <td class="dtr-control sorting_1" tabindex="0">{{ $blog->id}}</td>
                                             <td>{{ $blog->name }}</td>
                                             <td>{{ $blog->description }}</td>
-                                            <td>{{ $blog->img }}</td>
+                                            <td><img src="{{ asset('/storage/app/public/'.$blog->img) }}" alt=""> </td>
                                             <td>{{ $blog->BlogSection->name }}</td>
 
                                             <td>
@@ -82,7 +82,7 @@
                                                         type="button" data-bs-toggle="dropdown" aria-expanded="true">
                                                         <i class="ri-more-fill align-middle"></i>
                                                     </button>
-                                                    <ul class="dropdown-menu dropdown-menu-end show"
+                                                    <ul class="dropdown-menu dropdown-menu-end"
                                                         data-popper-placement="top-end"
                                                         style="position: absolute; inset: auto 0px 0px auto; margin: 0px; transform: translate(0px, -29px);"
                                                         data-popper-reference-hidden="">

@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-  <form action="{{ route('AddBlogSection') }}" method="post">
+  <form action="{{ route('admin.AddBlogSection') }}" method="post">
     @csrf
     <div class="row">
       <div class="col-lg-12">

@@ -35,7 +35,7 @@ class BlogSectionController extends Controller
     $blog_section->description=$request->description;
     $blog_section->save();
 
-    return redirect()->route('BlogSection');  
+    return redirect()->route('admin.BlogSection');  
   }
   public function edit($id){
 
@@ -61,13 +61,13 @@ class BlogSectionController extends Controller
     //   'description'=>$request->description,
     // ]);
 
-    return redirect()->route('BlogSection');  
+    return redirect()->route('admin.BlogSection');  
   }
 
   public function delete($id){
     $blogSection=BlogSection::find($id);
     $blogSection->delete();
     // DB::table('blog_sections')->where('id',$id)->delete();
-    return redirect()->route('BlogSection');  
+    return redirect()->route('admin.BlogSection');  
   }
 }
